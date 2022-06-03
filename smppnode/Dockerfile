@@ -1,0 +1,25 @@
+#FROM node:10
+#FROM node:17-alpine
+FROM node:18-alpine
+WORKDIR /usr/src/app
+COPY package*.json server_41.js fastify.js ecosystem.config.js ./
+
+#RUN apk add g++ make python3
+RUN npm install
+#RUN npm install -g npm@8.5.5
+#RUN npm install smpp
+RUN npm install pm2 -g
+#RUN npm install pm2 
+#EXPOSE 2775
+#CMD ["node", "server.js"]
+#CMD ["pm2", "start", "server.js"]
+#CMD ["pm2-runtime", "server_41.js"]
+#CMD ["pm2-runtime", "fastify.js"]
+
+#ecosystem.config.js
+
+CMD ["pm2-runtime", "ecosystem.config.js"]
+
+#CMD ["pm2", "start", "server_41.js"]
+#CMD ["pm2", "start", "fastify.js"]
+

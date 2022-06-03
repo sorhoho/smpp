@@ -1,0 +1,11 @@
+module.exports = [{
+  script: 'server_41.js',
+  name: 'app',
+  exec_mode: 'cluster',
+  instances: 2
+}, {
+  script: 'fastify.js',
+  name: 'publisher'
+  exec_mode: 'cluster',
+  instances: 2
+}]

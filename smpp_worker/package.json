@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "amqplib": "^0.8.0",
+    "smpp": "^0.6.0-rc.3"
+  }
+}

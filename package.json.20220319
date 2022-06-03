@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "amqplib": "^0.8.0",
+    "fastify": "^3.19.1",
+    "fastify-amqp": "^1.0.0",
+    "smpp": "^0.5.0"
+  }
+}
