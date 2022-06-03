@@ -1,5 +1,6 @@
 #FROM node:10
-FROM node:17-alpine
+#FROM node:17-alpine
+FROM node:18-alpine
 WORKDIR /usr/src/app
 COPY package*.json ecosystem.config.js client2.js ./
 

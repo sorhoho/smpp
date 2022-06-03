@@ -5,7 +5,7 @@ services:
         ports:
             - '80:80'
         volumes:
-            - '/home/ubuntu/poc/nginx/nginx.conf:/etc/nginx/nginx.conf:ro'
+            - '/home/ubuntu/poc/smpp/nginx/nginx.conf:/etc/nginx/nginx.conf:ro'
         networks:
           - mynetwork
         image: nginx
