@@ -1,0 +1,33 @@
+version: '3.3'
+services:
+    nginx:
+        container_name: nginx
+        ports:
+            - '80:80'
+        volumes:
+            - '/home/ubuntu/poc/nginx/nginx.conf:/etc/nginx/nginx.conf:ro'
+        network_mode: mynetwork
+        image: nginx
+    
+    smppnode:
+        container_name: smpp_proxy_server
+        network_mode: mynetwork
+        image: smppnode
+
+    rabbitmq:
+        container_name: rabbitmq
+        ports:
+            - '5672:5672'
+            - '15672:15672'
+        network_mode: mynetwork
+        image: 'rabbitmq:3-management'
+
+    smppclient:
+        container_name: smpp_client
+        network_mode: mynetwork
+        image: smppclient
+
+
+networks:
+  mynetwork:
+
